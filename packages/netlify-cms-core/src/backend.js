@@ -19,7 +19,7 @@ import { getBackend } from 'Lib/registry';
 import { Cursor, CURSOR_COMPATIBILITY_SYMBOL } from 'netlify-cms-lib-util';
 import { EDITORIAL_WORKFLOW, status } from 'Constants/publishModes';
 
-class LocalStorageAuthStore {
+export class LocalStorageAuthStore {
   storageKey = 'netlify-cms-user';
 
   retrieve() {
@@ -120,7 +120,7 @@ const sortByScore = (a, b) => {
   return 0;
 };
 
-class Backend {
+export class Backend {
   constructor(implementation, { backendName, authStore = null, config } = {}) {
     this.implementation = implementation.init(config, {
       useWorkflow: config.getIn(['publish_mode']) === EDITORIAL_WORKFLOW,
@@ -135,6 +135,7 @@ class Backend {
   }
 
   currentUser() {
+    // TODO: investigate, `this.user` doesn't look like it is ever true.
     if (this.user) {
       return this.user;
     }
