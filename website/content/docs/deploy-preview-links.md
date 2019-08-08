@@ -33,7 +33,7 @@ Deploy preview links are provided in the editor toolbar, near the publishing con
 ![Deploy preview link for unpublished content](/img/preview-link-unpublished.png)
 
 ### Waiting for builds
-Deploy your site preview may take ten seconds or ten minutes, depending on many factors. For maximum
+Deploying your site preview may take ten seconds or ten minutes, depending on many factors. For maximum
 flexibility, Netlify CMS provides a "Check for Preview" refresh button when the deploy preview is
 pending, which a content editor can use to manually check for a finished preview until it's ready:
 
